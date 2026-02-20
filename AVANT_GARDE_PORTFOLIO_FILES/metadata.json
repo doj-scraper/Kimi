@@ -1,0 +1,7 @@
+{
+  "name": "AVANT_GARDE_PORTFOLIO",
+  "description": "A high-end, fixed-frame portfolio site featuring infinite scrolling, cinema mode, and keyboard shortcuts.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
