@@ -1,0 +1,38 @@
+[project]
+name = "aegis-common-schema"
+version = "1.0.0"
+description = "Aegis canonical Pydantic models"
+requires-python = ">=3.10"
+dependencies = [
+  "pydantic>=2.6",
+  "fastapi>=0.110",
+  "uvicorn[standard]>=0.27",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "mypy>=1.8",
+  "types-requests",
+  "httpx",
+]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+strict_optional = true
+check_untyped_defs = true
+no_implicit_optional = true
+
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["aegis_common_schema"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
